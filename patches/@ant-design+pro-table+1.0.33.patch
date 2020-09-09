@@ -1,0 +1,31 @@
+diff --git a/node_modules/@ant-design/pro-table/es/Form/index.js b/node_modules/@ant-design/pro-table/es/Form/index.js
+index 8081148..d547566 100644
+--- a/node_modules/@ant-design/pro-table/es/Form/index.js
++++ b/node_modules/@ant-design/pro-table/es/Form/index.js
+@@ -88,6 +88,8 @@ var FromInputRender = React.forwardRef(function (_ref, ref) {
+     if (valueEnum) {
+       return React.createElement(_Select, Object.assign({
+         placeholder: intl.getMessage('tableFrom.selectPlaceholder', '请选择'),
++        showSearch: true,
++        optionFilterProp: 'children',
+         ref: ref
+       }, rest, item.formItemProps), parsingValueEnumToArray(valueEnum).map(function (_ref2) {
+         var value = _ref2.value,
+@@ -105,7 +107,7 @@ var FromInputRender = React.forwardRef(function (_ref, ref) {
+   }
+ 
+   if (item.valueType === 'date') {
+-    return React.createElement(_DatePicker, Object.assign({
++    return React.createElement(_DatePicker.RangePicker, Object.assign({
+       ref: ref,
+       placeholder: intl.getMessage('tableFrom.selectPlaceholder', '请选择'),
+       style: {
+@@ -115,7 +117,7 @@ var FromInputRender = React.forwardRef(function (_ref, ref) {
+   }
+ 
+   if (item.valueType === 'dateTime') {
+-    return React.createElement(_DatePicker, Object.assign({
++    return React.createElement(_DatePicker.RangePicker, Object.assign({
+       showTime: true,
+       ref: ref,
+       placeholder: intl.getMessage('tableFrom.selectPlaceholder', '请选择'),

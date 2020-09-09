@@ -1,0 +1,97 @@
+@import '~antd/es/style/themes/default.less';
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// 兼容IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+
+.antd-pro-components-notice-icon-index-tabs .ant-tabs-nav-scroll {
+  text-align: left !important;
+}
+
+.ant-pro-table-form-search .ant-legacy-form-item-label {
+  width: 33% !important;
+  text-align: left;
+}
+
+.ant-pro-sider-menu-logo {
+  padding: 0;
+}
+
+.logo-wrapper {
+  padding: 0 24px;
+  box-shadow: 3px 2px 7px -1px rgba(104, 132, 241, 0.2);
+}
+
+.avatar-wrapper {
+  margin-bottom: 7px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 3px 2px 7px -1px rgba(104, 132, 241, 0.2);
+}
+
+@media (max-width: @screen-md) {
+  .ant-pro-global-header .avatar-wrapper {
+    display: none;
+  }
+  .ant-pro-global-header .logo-wrapper {
+    padding: 0;
+    box-shadow: none;
+  }
+  .ant-drawer-content-wrapper .logo-wrapper {
+    padding: 0 24px;
+  }
+}
+
+.ant-layout-sider-collapsed .avatar-wrapper {
+  zoom: 0.8;
+}

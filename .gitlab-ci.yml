@@ -1,0 +1,25 @@
+image: node:latest
+
+stages:
+  - build
+  - test
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: build
+  script:
+    - yarn install
+  artifacts:
+    paths:
+      - node_modules/
+
+eslint:
+  stage: test
+  before_script:
+    # Install eslint:
+    - npm i -g eslint
+  script: yarn lint
